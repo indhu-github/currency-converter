@@ -1,0 +1,11 @@
+#rupees {
+  border: none;
+  border-bottom: 1px solid black;
+}
+#output {
+  border: 0;
+  border-bottom: 1px solid black;
+}
+input:focus {
+  outline: none;
+}

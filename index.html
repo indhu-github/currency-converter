@@ -10,7 +10,9 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="styles.css" />
     <title>Currency Converter</title>
+    <script defer src="app.js"></script>
   </head>
   <body>
     <header id="main-header" class="bg-secondary text-white p-4 mb-3">
@@ -23,7 +25,7 @@
       </div>
     </header>
     <div class="container">
-      <div class="row w-50 align-self-center m-auto mt-5">
+      <div class="row align-self-center m-auto mt-5">
         <div class="col">
           <input
             type="number"
@@ -31,17 +33,42 @@
             id="rupees"
             placeholder="Enter amount in rupees"
           />
+          <input
+            type="number"
+            readonly
+            class="form-control-plaintext mt-3 text-center"
+            id="output"
+            placeholder="0"
+          />
         </div>
-      </div>
-
-      <div class="container row w-50 align-self-center m-auto mt-5">
-        <div class="row row-cols-3">
-          <div class="col border p-3 text-center">Column</div>
-          <div class="col border p-3 text-center">Column</div>
-          <div class="col border p-3 text-center">Column</div>
-          <div class="col border p-3 text-center">Column</div>
-          <div class="col border p-3 text-center">Column</div>
-          <div class="col border p-3 text-center">Column</div>
+        <div class="row row-cols-3 mt-5 mx-auto">
+          <div class="btn btn-outline-dark p-3 text-center rounded mb-2">
+            Dollar
+          </div>
+          <div class="btn btn-outline-dark p-3 text-center rounded mb-2">
+            Euro
+          </div>
+          <div class="btn btn-outline-dark p-3 text-center rounded mb-2">
+            Dinar
+          </div>
+          <div class="btn btn-outline-dark p-3 text-center rounded mb-2">
+            Pound
+          </div>
+          <div class="btn btn-outline-dark p-3 text-center rounded mb-2">
+            Bitcoin
+          </div>
+          <div class="btn btn-outline-dark p-3 text-center rounded mb-2">
+            Column
+          </div>
+          <div class="btn btn-outline-dark p-3 text-center rounded mb-2">
+            Column
+          </div>
+          <div class="btn btn-outline-dark p-3 text-center rounded mb-2">
+            Column
+          </div>
+          <div class="btn btn-outline-dark p-3 text-center rounded mb-2">
+            Column
+          </div>
         </div>
       </div>
     </div>
