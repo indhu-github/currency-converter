@@ -1,19 +1,16 @@
-const input = document.getElementById("rupees");
-const output = document.getElementById("output");
-const dollar = document.getElementById("dollar");
+var input = document.getElementById("rupees");
+console.log(input.value);
+var output = document.getElementById("output");
+var dollar = document.getElementById("dollar");
 
-const convertToDollar = function (prop) {
-  console.log(prop);
-  console.log(prop / 64);
-  return prop / 64;
+const convertToDollar = function () {
+  console.log("uewfcojsdb", input.value);
+  return input.value / 64;
 };
-
-//input.addEventListener("keyup", convertCurrency);
 
 const convertCurrency = function (currency) {
-  console.log(input.value);
-  const usDollar = currency(input.value);
-  console.log(usDollar);
-  document.querySelector("#output").value = usDollar;
+  const usDollar = convertToDollar(currency);
+  document.querySelector(".output").value = usDollar;
 };
-dollar.addEventListener("click", convertCurrency(convertToDollar));
+//dollar.addEventListener("click", convertCurrency(convertToDollar));
+input.addEventListener("keyup", convertCurrency);
