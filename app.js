@@ -1,16 +1,13 @@
-var input = document.getElementById("rupees");
-console.log(input.value);
+var rupee = document.getElementById("rupees");
 var output = document.getElementById("output");
 var dollar = document.getElementById("dollar");
+var euro = document.getElementById("euro");
 
-const convertToDollar = function () {
-  console.log("uewfcojsdb", input.value);
-  return input.value / 64;
-};
-
-const convertCurrency = function (currency) {
-  const usDollar = convertToDollar(currency);
-  document.querySelector(".output").value = usDollar;
-};
-//dollar.addEventListener("click", convertCurrency(convertToDollar));
-input.addEventListener("keyup", convertCurrency);
+rupee.addEventListener("keyup", () => {
+  dollar.addEventListener("click", function () {
+    document.querySelector("#output").value = rupee.value / 64;
+  });
+  euro.addEventListener("click", function () {
+    document.querySelector("#output").value = rupee.value / 32;
+  });
+});
