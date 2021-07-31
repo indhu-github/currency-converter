@@ -12,30 +12,48 @@ var yen = document.getElementById("yen");
 
 rupee.addEventListener("keyup", () => {
   dollar.addEventListener("click", function () {
-    document.querySelector("#output").value = rupee.value / 64;
+    document.querySelector("#output").value = parseFloat(
+      rupee.value / 64
+    ).toFixed(2);
   });
   euro.addEventListener("click", function () {
-    document.querySelector("#output").value = rupee.value * 0.011;
+    document.querySelector("#output").value = parseFloat(
+      rupee.value * 0.011
+    ).toFixed(2);
   });
   dinar.addEventListener("click", function () {
-    document.querySelector("#output").value = rupee.value * 0.004;
+    document.querySelector("#output").value = parseFloat(
+      rupee.value * 0.004
+    ).toFixed(2);
   });
   pound.addEventListener("click", function () {
-    document.querySelector("#output").value = rupee.value * 0.0097;
+    document.querySelector("#output").value = parseFloat(
+      rupee.value * 0.0097
+    ).toFixed(2);
   });
   bitcoin.addEventListener("click", function () {
-    document.querySelector("#output").value = (rupee.value * 0.000032) / 100;
+    document.querySelector("#output").value = parseFloat(
+      (rupee.value * 0.000032) / 100
+    ).toFixed(5);
   });
   rubel.addEventListener("click", function () {
-    document.querySelector("#output").value = rupee.value * 0.98;
+    document.querySelector("#output").value = parseFloat(
+      rupee.value * 0.98
+    ).toFixed(2);
   });
   ausDollar.addEventListener("click", function () {
-    document.querySelector("#output").value = rupee.value * 0.018;
+    document.querySelector("#output").value = parseFloat(
+      rupee.value * 0.018
+    ).toFixed(2);
   });
   canDollar.addEventListener("click", function () {
-    document.querySelector("#output").value = rupee.value * 0.017;
+    document.querySelector("#output").value = parseFloat(
+      rupee.value * 0.017
+    ).toFixed(2);
   });
   yen.addEventListener("click", function () {
-    document.querySelector("#output").value = rupee.value * 1.47;
+    document.querySelector("#output").value = parseFloat(
+      rupee.value * 1.47
+    ).toFixed(2);
   });
 });
