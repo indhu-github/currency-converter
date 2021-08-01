@@ -62,80 +62,48 @@ var yen = document.getElementById("yen");
 
 //Using higher order functions
 //single method for all conversions
-const convertCurrency = function (converter) {
-  output.value = converter(rupee.value);
+const convertCurrency = function (converter, val) {
+  output.value = converter(rupee.value, val);
 };
 
 //All the amount converison methods
-const convertToUSD = function (inr) {
-  return parseFloat(inr / 74.68).toFixed(2);
-};
-
-const convertToEuro = function (inr) {
-  return parseFloat(rupee.value * 0.011).toFixed(2);
-};
-
-const convertToDinar = function (inr) {
-  return parseFloat(rupee.value * 0.004).toFixed(2);
-};
-
-const convertToPound = function (inr) {
-  return parseFloat(rupee.value * 0.0097).toFixed(2);
-};
-
-const convertToBitcoin = function (inr) {
-  return parseFloat((rupee.value * 0.000032) / 100).toFixed(5);
-};
-
-const convertToRubel = function (inr) {
-  return parseFloat(rupee.value * 0.98).toFixed(2);
-};
-
-const convertToAusDollar = function (inr) {
-  return parseFloat(rupee.value * 0.018).toFixed(2);
-};
-
-const convertToCanDollar = function (inr) {
-  return parseFloat(rupee.value * 0.017).toFixed(2);
-};
-
-const convertToYen = function (inr) {
-  return parseFloat(rupee.value * 1.47).toFixed(2);
+const convert = function (inr, val) {
+  return parseFloat(inr * val).toFixed(5);
 };
 
 //Event Listeners
 dollar.addEventListener("click", function () {
-  convertCurrency(convertToUSD);
+  convertCurrency(convert, 0.013);
 });
 
 euro.addEventListener("click", function () {
-  convertCurrency(convertToEuro);
+  convertCurrency(convert, 0.011);
 });
 
 dinar.addEventListener("click", function () {
-  convertCurrency(convertToDinar);
+  convertCurrency(convert, 0.004);
 });
 
 pound.addEventListener("click", function () {
-  convertCurrency(convertToPound);
+  convertCurrency(convert, 0.0097);
 });
 
 bitcoin.addEventListener("click", function () {
-  convertCurrency(convertToBitcoin);
+  convertCurrency(convert, 0.000032);
 });
 
 rubel.addEventListener("click", function () {
-  convertCurrency(convertToRubel);
+  convertCurrency(convert, 0.98);
 });
 
 ausDollar.addEventListener("click", function () {
-  convertCurrency(convertToAusDollar);
+  convertCurrency(convert, 0.018);
 });
 
 canDollar.addEventListener("click", function () {
-  convertCurrency(convertToCanDollar);
+  convertCurrency(convert, 0.017);
 });
 
 yen.addEventListener("click", function () {
-  convertCurrency(convertToYen);
+  convertCurrency(convert, 1.47);
 });
